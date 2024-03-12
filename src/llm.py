@@ -17,7 +17,7 @@ def chat_complete(messages: list):
     "Authorization": f"Bearer {MISTRAL_API_KEY}"
   }
   data = {
-    "model": "mistral-large-latest",
+    "model": "open-mixtral-8x7b",
     "messages": messages
   }
   response = requests.post(url, headers=headers, json=data)
