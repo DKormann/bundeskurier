@@ -22,8 +22,8 @@ def chat_complete(messages: list):
   }
   response = requests.post(url, headers=headers, json=data)
   data = response.json()
+  print(data)
   resp = data['choices'][0]['message']['content']
   return resp
 
-if __name__ == "__main__":
-    print(fetch_answer("What is the meaning of life?"))
+if __name__ == "__main__": print(fetch_answer("What is the meaning of life?"))
