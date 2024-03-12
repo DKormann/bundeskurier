@@ -1,7 +1,6 @@
 import requests
 import random
 
-
 class BT:
     api_key = "rgsaY4U.oZRQKUHdJhF9qguHMkwCGIoLaqEcaHjYLF"
 
@@ -49,7 +48,8 @@ class BT:
             f'Vorgangsbezug:',
             *[f'- {x["titel"]} ({x["vorgangstyp"]})' for x in item["vorgangsbezug"]],
             f'\n## Zufälliger Auszug aus: {item["titel"]}\n',
-            f'{short_text}',
+            f'{short_text}\n',
+            f'Quelle: {item["fundstelle"]["pdf_url"]}',
         ])
         return result
         
